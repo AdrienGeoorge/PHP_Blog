@@ -1,0 +1,17 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteRule ^post/show/([0-9]+)$   index.php?controller=post&action=show&id=$1 [L]
+RewriteRule ^post/create   index.php?controller=post&action=create [L]
+RewriteRule ^post/update/([0-9]+)$   index.php?controller=post&action=update&id=$1 [L]
+RewriteRule ^post/delete/([0-9]+)$   index.php?controller=post&action=delete&id=$1 [L]
+
+RewriteRule ^categories/show/([0-9]+)$   index.php?controller=categories&action=show&id=$1 [L]
+RewriteRule ^categories/delete/([0-9]+)$   index.php?controller=categories&action=delete&id=$1 [L]
+RewriteRule ^categories/show   index.php?controller=categories&action=show [L]
+
+RewriteRule ^user/login   index.php?controller=user&action=login [L]
+RewriteRule ^user/logout   index.php?controller=user&action=logout [L]
+RewriteRule ^user/profile   index.php?controller=user&action=profile [L]
+RewriteRule ^user/update   index.php?controller=user&action=update [L]
+RewriteRule ^user/posts   index.php?controller=user&action=posts [L]
